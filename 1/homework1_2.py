@@ -14,7 +14,7 @@ def load_with_copy(lists):
     connection.commit()
     cursor.close()
 
-connection = sqlite3.connect('hw1.db') # создать базу
+connection = sqlite3.connect('hw2.db') # создать базу
 cursor = connection.cursor()
 new_table = """ CREATE TABLE IF NOT EXISTS telecom_companies(
     ogrn INTEGER PRIMARY KEY,
