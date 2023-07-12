@@ -4,7 +4,7 @@ import sqlite3
 from pathlib import Path
 
 def load_with_copy(lists):
-    connection = sqlite3.connect('hw1.db')
+    connection = sqlite3.connect('hw2.db')
     cursor = connection.cursor()
     insert_several_rows_parameters = """
         INSERT INTO telecom_companies (ogrn, name, inn, okved, okved_name)
