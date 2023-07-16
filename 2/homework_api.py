@@ -82,10 +82,7 @@ Base.metadata.create_all(bind=engine)
 Sesion = sessionmaker(bind=engine)
 session = Sesion()
 for record in data_prep:
-    new_record = Vacancy_prep(company_name=record['company_name'],
-                              position=record['position'],
-                              job_description=record['job_descripton'],
-                              key_skills=record['key_skills'])
+    new_record = Vacancy_prep(record[0], record[1], record[2],record[3])
     session.add(new_record)
 session.commit()
 session.close()
