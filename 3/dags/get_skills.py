@@ -5,7 +5,7 @@ from config import config
 conn = None
 logger = logging.getLogger(__name__)
 def calc():
-    try:
+   try:
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
@@ -18,13 +18,16 @@ def calc():
                 lst+=f'{words} '
         list_text = lst.lower().replace(',  ', '').split(',')
         counts = Counter(list_text)
+        top=sorted(counts.items(), key=lambda x: x[1], reverse=True)
+        top10=top[:10]
         with open('total.txt', "w") as file:
-            file.write(f'{sorted(counts.items(), key=lambda x: x[1])}')     
+            file.write(f'{top10}')     
     except (Exception, psycopg2.DatabaseError) as error:
         logger.info(error)
     finally:
         if conn is not None:
             conn.close()
+
 
     
     
