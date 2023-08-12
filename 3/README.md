@@ -1,4 +1,4 @@
-Итоговый проект: Python для ETL (Попов Сергей)
+﻿Итоговый проект: Python для ETL (Попов Сергей)
 
 
 Создано вирт окружение (python -m venv airflow) и активировано (source airflow/bin/activate)

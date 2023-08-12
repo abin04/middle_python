@@ -1,0 +1,1 @@
+[(' sql', 15), (' docker', 10), (' aws', 10), (' git', 9), (' django framework', 8), (' postgresql', 8), (' linux', 7), (' английский языкpython', 7), (' django', 5), (' javascript', 5)]
