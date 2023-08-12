@@ -5,7 +5,7 @@ from config import config
 conn = None
 logger = logging.getLogger(__name__)
 def calc():
-   try:
+    try:
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
